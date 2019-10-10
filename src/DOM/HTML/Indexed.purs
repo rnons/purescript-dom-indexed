@@ -45,7 +45,7 @@ type GlobalAttributes r =
   )
 
 type GlobalEvents r =
-  ( onContextMenu :: Event
+  ( onContextMenu :: MouseEvent
   , onInput :: Event
   | r
   )
