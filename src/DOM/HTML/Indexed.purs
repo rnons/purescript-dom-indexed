@@ -47,6 +47,7 @@ type GlobalAttributes r =
 type GlobalEvents r =
   ( onContextMenu :: MouseEvent
   , onInput :: Event
+  , onScroll :: Event
   | r
   )
 
@@ -145,7 +146,7 @@ type HTMLa = Interactive
 
 type HTMLabbr = Interactive ()
 
-type HTMLaddress = Interactive (onScroll :: Event)
+type HTMLaddress = Interactive ()
 
 type HTMLarea = Interactive
   ( coords :: String
@@ -185,7 +186,6 @@ type HTMLbdo = Noninteractive ()
 
 type HTMLblockquote = Interactive
   ( cite :: String
-  , onScroll :: Event
   )
 
 type HTMLbody = Interactive
@@ -195,7 +195,6 @@ type HTMLbody = Interactive
   , onPageShow :: Event
   , onPageHide :: Event
   , onResize :: Event
-  , onScroll :: Event
   , onUnload :: Event
   )
 
@@ -220,7 +219,7 @@ type HTMLcanvas = Interactive
   , height :: CSSPixel
   )
 
-type HTMLcaption = Interactive (onScroll :: Event)
+type HTMLcaption = Interactive ()
 
 type HTMLcite = Interactive ()
 
@@ -234,7 +233,7 @@ type HTMLcommand = Interactive ()
 
 type HTMLdatalist = Interactive ()
 
-type HTMLdd = Interactive (onScroll :: Event)
+type HTMLdd = Interactive ()
 
 type HTMLdel = Interactive
   ( cite :: String
@@ -247,11 +246,11 @@ type HTMLdfn = Interactive ()
 
 type HTMLdialog = Interactive (open :: Boolean)
 
-type HTMLdiv = Interactive (onScroll :: Event)
+type HTMLdiv = Interactive ()
 
-type HTMLdl = Interactive (onScroll :: Event)
+type HTMLdl = Interactive ()
 
-type HTMLdt = Interactive (onScroll :: Event)
+type HTMLdt = Interactive ()
 
 type HTMLem = Interactive ()
 
@@ -266,7 +265,6 @@ type HTMLfieldset = Interactive
   ( disabled :: Boolean
   , form :: String
   , name :: String
-  , onScroll :: Event
   )
 
 type HTMLfigcaption = Interactive ()
@@ -284,22 +282,21 @@ type HTMLform = Interactive
   , name :: String
   , noValidate :: Boolean
   , onReset :: Event
-  , onScroll :: Event
   , onSubmit :: Event
   , target :: String
   )
 
-type HTMLh1 = Interactive (onScroll :: Event)
+type HTMLh1 = Interactive ()
 
-type HTMLh2 = Interactive (onScroll :: Event)
+type HTMLh2 = Interactive ()
 
-type HTMLh3 = Interactive (onScroll :: Event)
+type HTMLh3 = Interactive ()
 
-type HTMLh4 = Interactive (onScroll :: Event)
+type HTMLh4 = Interactive ()
 
-type HTMLh5 = Interactive (onScroll :: Event)
+type HTMLh5 = Interactive ()
 
-type HTMLh6 = Interactive (onScroll :: Event)
+type HTMLh6 = Interactive ()
 
 type HTMLhead = Noninteractive ()
 
@@ -309,7 +306,6 @@ type HTMLhr = Interactive ()
 
 type HTMLhtml = Interactive
   ( manifest :: String
-  , onScroll :: Event
   , xmlns :: String
   )
 
@@ -392,7 +388,6 @@ type HTMLlegend = Interactive ()
 
 type HTMLli = Interactive
   ( value :: Int
-  , onScroll :: Event
   )
 
 type HTMLlink = Noninteractive
@@ -414,7 +409,6 @@ type HTMLmark = Interactive ()
 
 type HTMLmenu = Interactive
   ( label :: String
-  , onScroll :: Event
   , type :: MenuType
   )
 
@@ -456,15 +450,13 @@ type HTMLobject = Interactive
   , height :: CSSPixel
   , name :: String
   , onError :: Event
-  , onScroll :: Event
   , type :: MediaType
   , useMap :: String
   , width :: CSSPixel
   )
 
 type HTMLol = Interactive
-  ( onScroll :: Event
-  , reversed :: Boolean
+  ( reversed :: Boolean
   , start :: Int
   , type :: OrderedListType
   )
@@ -487,14 +479,14 @@ type HTMLoutput = Interactive
   , name :: String
   )
 
-type HTMLp = Interactive (onScroll :: Event)
+type HTMLp = Interactive ()
 
 type HTMLparam = Noninteractive
   ( name :: String
   , value :: String
   )
 
-type HTMLpre = Interactive (onScroll :: Event)
+type HTMLpre = Interactive ()
 
 type HTMLprogress = Interactive
   ( max :: Number
@@ -530,7 +522,6 @@ type HTMLselect = Interactive
   , multiple :: Boolean
   , name :: String
   , onChange :: Event
-  , onScroll :: Event
   , required :: Boolean
   , selectedIndex :: Int
   , size :: Int
@@ -565,7 +556,7 @@ type HTMLsup = Interactive ()
 
 type HTMLtable = Interactive (sortable :: Boolean)
 
-type HTMLtbody = Interactive (onScroll :: Event)
+type HTMLtbody = Interactive ()
 
 type HTMLtd = Interactive
   ( colSpan :: Int
@@ -581,7 +572,6 @@ type HTMLtextarea = Interactive
   , maxLength :: Int
   , name :: String
   , onChange :: Event
-  , onScroll :: Event
   , onSelect :: Event
   , placeholder :: String
   , readOnly :: Boolean
@@ -591,7 +581,7 @@ type HTMLtextarea = Interactive
   , wrap :: WrapValue
   )
 
-type HTMLtfoot = Interactive (onScroll :: Event)
+type HTMLtfoot = Interactive ()
 
 type HTMLth = Interactive
   ( abbr :: String
@@ -620,7 +610,7 @@ type HTMLtrack = Interactive
 
 type HTMLu = Interactive ()
 
-type HTMLul = Interactive (onScroll :: Event)
+type HTMLul = Interactive ()
 
 type HTMLvar = Interactive ()
 
