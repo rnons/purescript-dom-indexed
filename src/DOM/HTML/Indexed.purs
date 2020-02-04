@@ -311,7 +311,7 @@ type HTMLhtml = Interactive
 
 type HTMLi = Interactive ()
 
-type HTMLiframe = Noninteractive
+type HTMLiframe = Interactive
   ( height :: CSSPixel
   , name :: String
   , onLoad :: Event
